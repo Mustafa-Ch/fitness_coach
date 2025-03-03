@@ -6,8 +6,8 @@ export class MailerService {
     private transporter = nodemailer.createTransport({
         service: 'gmail', //  Gmail use kar rahe hain (ya apni SMTP details dein)
         auth: {
-            user: 'furniro8@gmail.com', //  Apna email dalain
-            pass: 'akix ymmb ektj myjh', //  Apna email password dalain (Ya App Password use karein)
+            user: '', //  Apna email dalain
+            pass: '', //  Apna email password dalain (Ya App Password use karein)
         },
     });
 
