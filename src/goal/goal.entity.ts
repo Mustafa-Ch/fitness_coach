@@ -8,12 +8,12 @@ import {
 import { User } from '../auth/user.entity'; // Assuming your user entity is in the auth module
 
 export enum GoalType {
-  OPTIMIZE_GENERAL_HEALTH = 'Optimize general health',
-  OPTIMIZE_FITNESS = 'Optimize fitness',
-  OPTIMIZE_NUTRITION = 'Optimize nutrition',
-  IMPROVE_RECOVERY = 'Improve recovery',
-  MANAGE_STRESS = 'Manage stress',
-  ELEVATE_YOUR_LIFE = 'Elevate your life',
+  OPTIMIZE_GENERAL_HEALTH = 'Optimize General Health',
+  OPTIMIZE_FITNESS = 'Optimize Fitness',
+  OPTIMIZE_NUTRITION = 'Optimize Nutrition',
+  IMPROVE_RECOVERY = 'Improve Recovery',
+  MANAGE_STRESS = 'Manage Stress',
+  ELEVATE_YOUR_LIFE = 'Elevate Your Life',
 }
 
 @Entity()
