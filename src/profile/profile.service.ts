@@ -20,7 +20,6 @@ export class ProfileService {
     private userRepository: Repository<User>, // Injecting User repository
   ) {}
 
-  // Create a profile for a user
   async createProfile(createProfileDto: CreateProfileDto): Promise<Profile> {
     const { userId, ...profileData } = createProfileDto;
 
@@ -39,12 +38,14 @@ export class ProfileService {
     }
 
     // Create the new profile and associate it with the user
-    const profile = this.profileRepository.create({ ...profileData, user });
+    const profile = this.profileRepository.create({
+      ...profileData,
+      user,
+    });
 
     // Save and return the newly created profile
     return await this.profileRepository.save(profile);
   }
-
   // Get profile by userId
   async getProfileByUserId(userId: number): Promise<Profile> {
     const profile = await this.profileRepository.findOne({

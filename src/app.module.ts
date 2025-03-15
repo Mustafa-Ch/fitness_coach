@@ -8,6 +8,10 @@ import { GoalModule } from './goal/goal.module';
 import { HealthDataModule } from './health/health.module';
 import { FitnessLevelModule } from './fitness_level/fitness_level.module';
 import { ProfileModule } from './profile/profile.module';
+import { DietaryPreferenceModule } from './diet/diet.module';
+import { FileUploadModule } from './files/files.module';
+import { ServeStaticModule } from '@nestjs/serve-static';
+import * as path from 'path';
 
 @Module({
   imports: [
@@ -16,7 +20,10 @@ import { ProfileModule } from './profile/profile.module';
       isGlobal: true, // Makes the configuration globally available
       envFilePath: '.env', // Path to your environment variables
     }),
-
+    ServeStaticModule.forRoot({
+      rootPath: path.join(__dirname, '..', 'uploads'),
+      serveRoot: '/uploads', // URL path that will point to this folder
+    }),
     // Database connection setup using TypeOrm
     TypeOrmModule.forRoot({
       type: 'postgres',
@@ -34,12 +41,13 @@ import { ProfileModule } from './profile/profile.module';
       },
     }),
 
-    // Example AuthModule (you can replace or remove this if it's not needed)
     AuthModule,
     GoalModule,
     HealthDataModule,
     FitnessLevelModule,
     ProfileModule,
+    DietaryPreferenceModule,
+    FileUploadModule,
   ],
   controllers: [AppController],
   providers: [AppService],

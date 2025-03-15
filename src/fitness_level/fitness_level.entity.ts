@@ -1,24 +1,3 @@
-// // src/fitness-level/fitness-level.entity.ts
-// import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
-
-// export enum FitnessLevelEnum {
-//   BEGINNER = 'beginner',
-//   INTERMEDIATE = 'intermediate',
-//   ADVANCED = 'advanced',
-// }
-
-// @Entity()
-// export class FitnessLevel {
-//   @PrimaryGeneratedColumn()
-//   id: number;
-
-//   @Column({
-//     type: 'enum',
-//     enum: FitnessLevelEnum,
-//   })
-//   level: FitnessLevelEnum;
-// }
-
 import {
   Entity,
   PrimaryGeneratedColumn,

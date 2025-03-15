@@ -1,0 +1,390 @@
+Title,Status,signature,chef_recommendation,food,productFor,topupStep,product_type,Metafield Description
+Sambal Belacan Chilli,ACTIVE,true,false,,,,,; 
+Signature Kampong Fried Mee Siam,ACTIVE,true,false,,,,,; 
+Signature Kampong Dry Laksa,ACTIVE,true,true,,,,,; 
+Buah Keluak Fried Rice,ACTIVE,false,true,,,,,; 
+Blue Pea Flower Fragrant Rice,ACTIVE,false,false,Tasty fresh,,,,; ; 
+Classic Ayam Buah Keluak,ACTIVE,false,false,Tasty fresh,,,,; ; 
+Founder's Curry Chicken,ACTIVE,true,false,Tasty fresh,,,,; ; 
+Ayam Panggang,ACTIVE,true,true,Tasty fresh,,,,; ; 
+Nonya Assam Chicken,ACTIVE,false,false,,,,,; 
+Nonya Chap Chye W Mushroom,ACTIVE,true,false,,,,,; 
+Sambal Long Bean,ACTIVE,false,false,,,,,; 
+Nonya Sayur Lodeh,ACTIVE,true,false,,,,,; 
+Wok Fried French Bean with Petai, Black Olives & Cherry Tomato,ACTIVE,false,false,,,,,; 
+Steamed Assam Sambal Fish,ACTIVE,true,true,,,,,; 
+Curry Assam Fish with Pineapple Slices,ACTIVE,false,true,Tasty fresh,,,,; ; 
+Fish Fillet W Homemade Sambal Dip,ACTIVE,false,false,Tasty fresh,,,,; ; 
+Ikan Panggang Bumbu Kari,ACTIVE,false,false,Tasty fresh,,,,; ; 
+Otah with Leaf,ACTIVE,false,false,,,,,; 
+Mini Custard Puff,ACTIVE,true,false,,,,,; 
+Mini Chocolate Eclair,ACTIVE,false,false,,,,,; 
+Steamed Mini Soon Kueh,ACTIVE,true,true,,,,,; 
+Assorted Nonya Kueh,ACTIVE,true,false,Tasty fresh,,,,; ; 
+Assorted Nonya Kueh,ACTIVE,,,Tasty fresh,,,,
+Test Product,ACTIVE,,,,Catering Menu,,,
+Orange Clove Eco Pak Water 350ml X 24 (carton),ACTIVE,,,,Catering Menu,1,,; 
+Orange Clove Eco Pak Water (350ml),ACTIVE,,,,Catering Menu,10,,; 
+Packet Apple Juice,ACTIVE,,,,Catering Menu,10,,; 
+Packet Orange Juice,ACTIVE,,,,Catering Menu,10,,; 
+Coco Life Coconut Water (330ml),ACTIVE,,,Tasty fresh,Catering Menu,10,,; ; 
+Assorted Packet Drinks,ACTIVE,,,Tasty fresh,Catering Menu,10,,; ; 
+Pick Me Up Tea (10-12 Guests),ACTIVE,,,,Catering Menu,1,,; 
+Singapore Laksa w/ Condiments,ACTIVE,,,,Catering Menu,20,,; 
+Mee Siam w/ Condiments,ACTIVE,,,,Catering Menu,20,,; 
+Assorted Packet Drinks,ACTIVE,,,Tasty fresh,Catering Menu,20,,; ; 
+Sweets,ACTIVE,,,,Catering Menu,20,,; 
+Default product with price,ACTIVE,,,Tasty fresh,Catering Menu,,,; 
+Popiah DIY Set (20 Guest),ACTIVE,,,,Catering Menu,1,,; 
+Kueh Pie Tee DIY Set (20 Guest),ACTIVE,,,Tasty fresh,Catering Menu,1,,; ; 
+Chinese Vegetarian Bento w/ Dessert Of The Day,ACTIVE,,,Tasty fresh,Catering Menu,1,,; ; 
+Indian Vegetarian Bento w/ Dessert Of The Day,ACTIVE,,,Tasty fresh,Catering Menu,1,,; ; 
+Satay (Chicken) (50 PCS),ACTIVE,,,,Catering Menu,1,,; 
+Satay (Mutton) (50 PCS),ACTIVE,,,,Catering Menu,1,,; 
+Founder's Curry Chicken,ACTIVE,,,Tasty fresh,Catering Menu,20,,; ; 
+Sushi Platter - Set A (80pcs),ACTIVE,,,,Catering Menu,1,,; 
+Sushi Platter - Set B (96pcs),ACTIVE,,,,Catering Menu,1,,; 
+Honey Drumlets (50PCS),ACTIVE,,,Tasty fresh,Catering Menu,1,,; ; 
+Otah In Banana Leaf (50 PCS),ACTIVE,,,,Catering Menu,1,,; 
+Deep Fried Party Platter (Ebi Prawn, Teriyaki Drumlets, Chicken Nugget, Breaded Scallop & Fish Ball),ACTIVE,,,Tasty fresh,Catering Menu,1,,; ; 
+Breaded Scallop,ACTIVE,,,Tasty fresh,Catering Menu,20,,; ; 
+Sotong Ball,ACTIVE,,,,Catering Menu,20,,; 
+Chicken Nuggets,ACTIVE,,,Tasty fresh,Catering Menu,20,,; ; 
+Pastry,ACTIVE,,,,Catering Menu,20,topup,; ; 
+Peranakan Mini Buffet Set B,ACTIVE,,,,,,,
+Peranakan Mini Buffet Set C,ACTIVE,,,,,,,
+Testing Menu,ACTIVE,,,,,,,
+Neon Sign,ACTIVE,,,,,,,
+Testing menu,ACTIVE,,,,,,,
+Testing menu-shippingfee,ACTIVE,,,,,,,
+Sambal Belacan Chilli,ACTIVE,true,false,,,,,; 
+Signature Kampong Fried Mee Siam,ACTIVE,true,false,,,,,; 
+Signature Kampong Dry Laksa,ACTIVE,true,true,,,,,; 
+Buah Keluak Fried Rice,ACTIVE,false,true,,,,,; 
+Blue Pea Flower Fragrant Rice,ACTIVE,false,false,Tasty fresh,,,,; ; 
+Classic Ayam Buah Keluak,ACTIVE,false,false,Tasty fresh,,,,; ; 
+Founder's Curry Chicken,ACTIVE,true,false,Tasty fresh,,,,; ; 
+Ayam Panggang,ACTIVE,true,true,Tasty fresh,,,,; ; 
+Nonya Assam Chicken,ACTIVE,false,false,,,,,; 
+Nonya Chap Chye W Mushroom,ACTIVE,true,false,,,,,; 
+Sambal Long Bean,ACTIVE,false,false,,,,,; 
+Nonya Sayur Lodeh,ACTIVE,true,false,,,,,; 
+Wok Fried French Bean with Petai, Black Olives & Cherry Tomato,ACTIVE,false,false,,,,,; 
+Steamed Assam Sambal Fish,ACTIVE,true,true,,,,,; 
+Curry Assam Fish with Pineapple Slices,ACTIVE,false,true,Tasty fresh,,,,; ; 
+Fish Fillet W Homemade Sambal Dip,ACTIVE,false,false,Tasty fresh,,,,; ; 
+Ikan Panggang Bumbu Kari,ACTIVE,false,false,Tasty fresh,,,,; ; 
+Otah with Leaf,ACTIVE,false,false,,,,,; 
+Mini Custard Puff,ACTIVE,true,false,,,,,; 
+Mini Chocolate Eclair,ACTIVE,false,false,,,,,; 
+Steamed Mini Soon Kueh,ACTIVE,true,true,,,,,; 
+Assorted Nonya Kueh,ACTIVE,true,false,Tasty fresh,,,,; ; 
+Assorted Nonya Kueh,ACTIVE,,,Tasty fresh,,,,
+Test Product,ACTIVE,,,,Catering Menu,,,
+Orange Clove Eco Pak Water 350ml X 24 (carton),ACTIVE,,,,Catering Menu,1,,; 
+Orange Clove Eco Pak Water (350ml),ACTIVE,,,,Catering Menu,10,,; 
+Packet Apple Juice,ACTIVE,,,,Catering Menu,10,,; 
+Packet Orange Juice,ACTIVE,,,,Catering Menu,10,,; 
+Coco Life Coconut Water (330ml),ACTIVE,,,Tasty fresh,Catering Menu,10,,; ; 
+Assorted Packet Drinks,ACTIVE,,,Tasty fresh,Catering Menu,10,,; ; 
+Pick Me Up Tea (10-12 Guests),ACTIVE,,,,Catering Menu,1,,; 
+Singapore Laksa w/ Condiments,ACTIVE,,,,Catering Menu,20,,; 
+Mee Siam w/ Condiments,ACTIVE,,,,Catering Menu,20,,; 
+Assorted Packet Drinks,ACTIVE,,,Tasty fresh,Catering Menu,20,,; ; 
+Sweets,ACTIVE,,,,Catering Menu,20,,; 
+Default product with price,ACTIVE,,,Tasty fresh,Catering Menu,,,; 
+Popiah DIY Set (20 Guest),ACTIVE,,,,Catering Menu,1,,; 
+Kueh Pie Tee DIY Set (20 Guest),ACTIVE,,,Tasty fresh,Catering Menu,1,,; ; 
+Chinese Vegetarian Bento w/ Dessert Of The Day,ACTIVE,,,Tasty fresh,Catering Menu,1,,; ; 
+Indian Vegetarian Bento w/ Dessert Of The Day,ACTIVE,,,Tasty fresh,Catering Menu,1,,; ; 
+Satay (Chicken) (50 PCS),ACTIVE,,,,Catering Menu,1,,; 
+Satay (Mutton) (50 PCS),ACTIVE,,,,Catering Menu,1,,; 
+dawn glade,ACTIVE,,,Tasty fresh,,,,
+summer leaf,ACTIVE,,,,,,,
+hidden moon,ACTIVE,,,Tasty fresh,,,,
+twilight shadow,ACTIVE,,,,,,,
+Founder's Curry Chicken,ACTIVE,,,Tasty fresh,Catering Menu,20,,; ; 
+Sushi Platter - Set A (80pcs),ACTIVE,,,,Catering Menu,1,,; 
+Sushi Platter - Set B (96pcs),ACTIVE,,,,Catering Menu,1,,; 
+Honey Drumlets (50PCS),ACTIVE,,,Tasty fresh,Catering Menu,1,,; ; 
+Otah In Banana Leaf (50 PCS),ACTIVE,,,,Catering Menu,1,,; 
+Deep Fried Party Platter (Ebi Prawn, Teriyaki Drumlets, Chicken Nugget, Breaded Scallop & Fish Ball),ACTIVE,,,Tasty fresh,Catering Menu,1,,; ; 
+Breaded Scallop,ACTIVE,,,Tasty fresh,Catering Menu,20,,; ; 
+Sotong Ball,ACTIVE,,,,Catering Menu,20,,; 
+Chicken Nuggets,ACTIVE,,,Tasty fresh,Catering Menu,20,,; ; 
+Pastry,ACTIVE,,,,Catering Menu,20,topup,; ; 
+Peranakan Mini Buffet Set B,ACTIVE,,,,,,,
+Peranakan Mini Buffet Set C,ACTIVE,,,,,,,
+Testing Menu,ACTIVE,,,,,,,
+Neon Sign,ACTIVE,,,,,,,
+Testing menu,ACTIVE,,,,,,,
+Testing menu-shippingfee,ACTIVE,,,,,,,
+Sambal Belacan Chilli,ACTIVE,true,false,,,,,; 
+Signature Kampong Fried Mee Siam,ACTIVE,true,false,,,,,; 
+Signature Kampong Dry Laksa,ACTIVE,true,true,,,,,; 
+Buah Keluak Fried Rice,ACTIVE,false,true,,,,,; 
+Blue Pea Flower Fragrant Rice,ACTIVE,false,false,Tasty fresh,,,,; ; 
+Classic Ayam Buah Keluak,ACTIVE,false,false,Tasty fresh,,,,; ; 
+Founder's Curry Chicken,ACTIVE,true,false,Tasty fresh,,,,; ; 
+Ayam Panggang,ACTIVE,true,true,Tasty fresh,,,,; ; 
+Nonya Assam Chicken,ACTIVE,false,false,,,,,; 
+Nonya Chap Chye W Mushroom,ACTIVE,true,false,,,,,; 
+Sambal Long Bean,ACTIVE,false,false,,,,,; 
+Nonya Sayur Lodeh,ACTIVE,true,false,,,,,; 
+Wok Fried French Bean with Petai, Black Olives & Cherry Tomato,ACTIVE,false,false,,,,,; 
+Steamed Assam Sambal Fish,ACTIVE,true,true,,,,,; 
+Curry Assam Fish with Pineapple Slices,ACTIVE,false,true,Tasty fresh,,,,; ; 
+Fish Fillet W Homemade Sambal Dip,ACTIVE,false,false,Tasty fresh,,,,; ; 
+Ikan Panggang Bumbu Kari,ACTIVE,false,false,Tasty fresh,,,,; ; 
+Otah with Leaf,ACTIVE,false,false,,,,,; 
+Mini Custard Puff,ACTIVE,true,false,,,,,; 
+Mini Chocolate Eclair,ACTIVE,false,false,,,,,; 
+Steamed Mini Soon Kueh,ACTIVE,true,true,,,,,; 
+Assorted Nonya Kueh,ACTIVE,true,false,Tasty fresh,,,,; ; 
+Assorted Nonya Kueh,ACTIVE,,,Tasty fresh,,,,
+Test Product,ACTIVE,,,,Catering Menu,,,
+Orange Clove Eco Pak Water 350ml X 24 (carton),ACTIVE,,,,Catering Menu,1,,; 
+Orange Clove Eco Pak Water (350ml),ACTIVE,,,,Catering Menu,10,,; 
+Packet Apple Juice,ACTIVE,,,,Catering Menu,10,,; 
+Packet Orange Juice,ACTIVE,,,,Catering Menu,10,,; 
+Coco Life Coconut Water (330ml),ACTIVE,,,Tasty fresh,Catering Menu,10,,; ; 
+Assorted Packet Drinks,ACTIVE,,,Tasty fresh,Catering Menu,10,,; ; 
+Pick Me Up Tea (10-12 Guests),ACTIVE,,,,Catering Menu,1,,; 
+Singapore Laksa w/ Condiments,ACTIVE,,,,Catering Menu,20,,; 
+Mee Siam w/ Condiments,ACTIVE,,,,Catering Menu,20,,; 
+Assorted Packet Drinks,ACTIVE,,,Tasty fresh,Catering Menu,20,,; ; 
+Sweets,ACTIVE,,,,Catering Menu,20,,; 
+Default product with price,ACTIVE,,,Tasty fresh,Catering Menu,,,; 
+Popiah DIY Set (20 Guest),ACTIVE,,,,Catering Menu,1,,; 
+Kueh Pie Tee DIY Set (20 Guest),ACTIVE,,,Tasty fresh,Catering Menu,1,,; ; 
+Chinese Vegetarian Bento w/ Dessert Of The Day,ACTIVE,,,Tasty fresh,Catering Menu,1,,; ; 
+Indian Vegetarian Bento w/ Dessert Of The Day,ACTIVE,,,Tasty fresh,Catering Menu,1,,; ; 
+Satay (Chicken) (50 PCS),ACTIVE,,,,Catering Menu,1,,; 
+Satay (Mutton) (50 PCS),ACTIVE,,,,Catering Menu,1,,; 
+dawn glade,ACTIVE,,,Tasty fresh,,,,
+summer leaf,ACTIVE,,,,,,,
+hidden moon,ACTIVE,,,Tasty fresh,,,,
+twilight shadow,ACTIVE,,,,,,,
+Founder's Curry Chicken,ACTIVE,,,Tasty fresh,Catering Menu,20,,; ; 
+Sushi Platter - Set A (80pcs),ACTIVE,,,,Catering Menu,1,,; 
+Sushi Platter - Set B (96pcs),ACTIVE,,,,Catering Menu,1,,; 
+Honey Drumlets (50PCS),ACTIVE,,,Tasty fresh,Catering Menu,1,,; ; 
+Otah In Banana Leaf (50 PCS),ACTIVE,,,,Catering Menu,1,,; 
+Deep Fried Party Platter (Ebi Prawn, Teriyaki Drumlets, Chicken Nugget, Breaded Scallop & Fish Ball),ACTIVE,,,Tasty fresh,Catering Menu,1,,; ; 
+Breaded Scallop,ACTIVE,,,Tasty fresh,Catering Menu,20,,; ; 
+Sotong Ball,ACTIVE,,,,Catering Menu,20,,; 
+Chicken Nuggets,ACTIVE,,,Tasty fresh,Catering Menu,20,,; ; 
+Pastry,ACTIVE,,,,Catering Menu,20,topup,; ; 
+Peranakan Mini Buffet Set B,ACTIVE,,,,,,,
+Peranakan Mini Buffet Set C,ACTIVE,,,,,,,
+Testing Menu,ACTIVE,,,,,,,
+Neon Sign,ACTIVE,,,,,,,
+Testing menu,ACTIVE,,,,,,,
+Testing menu-shippingfee,ACTIVE,,,,,,,
+Sambal Belacan Chilli,ACTIVE,true,false,,,,,; 
+Signature Kampong Fried Mee Siam,ACTIVE,true,false,,,,,; 
+Signature Kampong Dry Laksa,ACTIVE,true,true,,,,,; 
+Buah Keluak Fried Rice,ACTIVE,false,true,,,,,; 
+Blue Pea Flower Fragrant Rice,ACTIVE,false,false,Tasty fresh,,,,; ; 
+Classic Ayam Buah Keluak,ACTIVE,false,false,Tasty fresh,,,,; ; 
+Founder's Curry Chicken,ACTIVE,true,false,Tasty fresh,,,,; ; 
+Ayam Panggang,ACTIVE,true,true,Tasty fresh,,,,; ; 
+Nonya Assam Chicken,ACTIVE,false,false,,,,,; 
+Nonya Chap Chye W Mushroom,ACTIVE,true,false,,,,,; 
+Sambal Long Bean,ACTIVE,false,false,,,,,; 
+Nonya Sayur Lodeh,ACTIVE,true,false,,,,,; 
+Wok Fried French Bean with Petai, Black Olives & Cherry Tomato,ACTIVE,false,false,,,,,; 
+Steamed Assam Sambal Fish,ACTIVE,true,true,,,,,; 
+Curry Assam Fish with Pineapple Slices,ACTIVE,false,true,Tasty fresh,,,,; ; 
+Fish Fillet W Homemade Sambal Dip,ACTIVE,false,false,Tasty fresh,,,,; ; 
+Ikan Panggang Bumbu Kari,ACTIVE,false,false,Tasty fresh,,,,; ; 
+Otah with Leaf,ACTIVE,false,false,,,,,; 
+Mini Custard Puff,ACTIVE,true,false,,,,,; 
+Mini Chocolate Eclair,ACTIVE,false,false,,,,,; 
+Steamed Mini Soon Kueh,ACTIVE,true,true,,,,,; 
+Assorted Nonya Kueh,ACTIVE,true,false,Tasty fresh,,,,; ; 
+Assorted Nonya Kueh,ACTIVE,,,Tasty fresh,,,,
+Test Product,ACTIVE,,,,Catering Menu,,,
+Orange Clove Eco Pak Water 350ml X 24 (carton),ACTIVE,,,,Catering Menu,1,,; 
+Orange Clove Eco Pak Water (350ml),ACTIVE,,,,Catering Menu,10,,; 
+Packet Apple Juice,ACTIVE,,,,Catering Menu,10,,; 
+Packet Orange Juice,ACTIVE,,,,Catering Menu,10,,; 
+Coco Life Coconut Water (330ml),ACTIVE,,,Tasty fresh,Catering Menu,10,,; ; 
+Assorted Packet Drinks,ACTIVE,,,Tasty fresh,Catering Menu,10,,; ; 
+Pick Me Up Tea (10-12 Guests),ACTIVE,,,,Catering Menu,1,,; 
+Singapore Laksa w/ Condiments,ACTIVE,,,,Catering Menu,20,,; 
+Mee Siam w/ Condiments,ACTIVE,,,,Catering Menu,20,,; 
+Assorted Packet Drinks,ACTIVE,,,Tasty fresh,Catering Menu,20,,; ; 
+Sweets,ACTIVE,,,,Catering Menu,20,,; 
+Default product with price,ACTIVE,,,Tasty fresh,Catering Menu,,,; 
+Popiah DIY Set (20 Guest),ACTIVE,,,,Catering Menu,1,,; 
+Kueh Pie Tee DIY Set (20 Guest),ACTIVE,,,Tasty fresh,Catering Menu,1,,; ; 
+Chinese Vegetarian Bento w/ Dessert Of The Day,ACTIVE,,,Tasty fresh,Catering Menu,1,,; ; 
+Indian Vegetarian Bento w/ Dessert Of The Day,ACTIVE,,,Tasty fresh,Catering Menu,1,,; ; 
+Satay (Chicken) (50 PCS),ACTIVE,,,,Catering Menu,1,,; 
+Satay (Mutton) (50 PCS),ACTIVE,,,,Catering Menu,1,,; 
+Founder's Curry Chicken,ACTIVE,,,Tasty fresh,Catering Menu,20,,; ; 
+Sushi Platter - Set A (80pcs),ACTIVE,,,,Catering Menu,1,,; 
+Sushi Platter - Set B (96pcs),ACTIVE,,,,Catering Menu,1,,; 
+Honey Drumlets (50PCS),ACTIVE,,,Tasty fresh,Catering Menu,1,,; ; 
+Otah In Banana Leaf (50 PCS),ACTIVE,,,,Catering Menu,1,,; 
+Deep Fried Party Platter (Ebi Prawn, Teriyaki Drumlets, Chicken Nugget, Breaded Scallop & Fish Ball),ACTIVE,,,Tasty fresh,Catering Menu,1,,; ; 
+Breaded Scallop,ACTIVE,,,Tasty fresh,Catering Menu,20,,; ; 
+Sotong Ball,ACTIVE,,,,Catering Menu,20,,; 
+Chicken Nuggets,ACTIVE,,,Tasty fresh,Catering Menu,20,,; ; 
+Pastry,ACTIVE,,,,Catering Menu,20,topup,; ; 
+Peranakan Mini Buffet Set B,ACTIVE,,,,,,,
+Peranakan Mini Buffet Set C,ACTIVE,,,,,,,
+Testing Menu,ACTIVE,,,,,,,
+Neon Sign,ACTIVE,,,,,,,
+Testing menu,ACTIVE,,,,,,,
+Testing menu-shippingfee,ACTIVE,,,,,,,
+Sambal Belacan Chilli,ACTIVE,true,false,,,,,; 
+Signature Kampong Fried Mee Siam,ACTIVE,true,false,,,,,; 
+Signature Kampong Dry Laksa,ACTIVE,true,true,,,,,; 
+Buah Keluak Fried Rice,ACTIVE,false,true,,,,,; 
+Blue Pea Flower Fragrant Rice,ACTIVE,false,false,Tasty fresh,,,,; ; 
+Classic Ayam Buah Keluak,ACTIVE,false,false,Tasty fresh,,,,; ; 
+Founder's Curry Chicken,ACTIVE,true,false,Tasty fresh,,,,; ; 
+Ayam Panggang,ACTIVE,true,true,Tasty fresh,,,,; ; 
+Nonya Assam Chicken,ACTIVE,false,false,,,,,; 
+Nonya Chap Chye W Mushroom,ACTIVE,true,false,,,,,; 
+Sambal Long Bean,ACTIVE,false,false,,,,,; 
+Nonya Sayur Lodeh,ACTIVE,true,false,,,,,; 
+Wok Fried French Bean with Petai, Black Olives & Cherry Tomato,ACTIVE,false,false,,,,,; 
+Steamed Assam Sambal Fish,ACTIVE,true,true,,,,,; 
+Curry Assam Fish with Pineapple Slices,ACTIVE,false,true,Tasty fresh,,,,; ; 
+Fish Fillet W Homemade Sambal Dip,ACTIVE,false,false,Tasty fresh,,,,; ; 
+Ikan Panggang Bumbu Kari,ACTIVE,false,false,Tasty fresh,,,,; ; 
+Otah with Leaf,ACTIVE,false,false,,,,,; 
+Mini Custard Puff,ACTIVE,true,false,,,,,; 
+Mini Chocolate Eclair,ACTIVE,false,false,,,,,; 
+Steamed Mini Soon Kueh,ACTIVE,true,true,,,,,; 
+Assorted Nonya Kueh,ACTIVE,true,false,Tasty fresh,,,,; ; 
+Assorted Nonya Kueh,ACTIVE,,,Tasty fresh,,,,
+Test Product,ACTIVE,,,,Catering Menu,,,
+Orange Clove Eco Pak Water 350ml X 24 (carton),ACTIVE,,,,Catering Menu,1,,; 
+Orange Clove Eco Pak Water (350ml),ACTIVE,,,,Catering Menu,10,,; 
+Packet Apple Juice,ACTIVE,,,,Catering Menu,10,,; 
+Packet Orange Juice,ACTIVE,,,,Catering Menu,10,,; 
+Coco Life Coconut Water (330ml),ACTIVE,,,Tasty fresh,Catering Menu,10,,; ; 
+Assorted Packet Drinks,ACTIVE,,,Tasty fresh,Catering Menu,10,,; ; 
+Pick Me Up Tea (10-12 Guests),ACTIVE,,,,Catering Menu,1,,; 
+Singapore Laksa w/ Condiments,ACTIVE,,,,Catering Menu,20,,; 
+Mee Siam w/ Condiments,ACTIVE,,,,Catering Menu,20,,; 
+Assorted Packet Drinks,ACTIVE,,,Tasty fresh,Catering Menu,20,,; ; 
+Sweets,ACTIVE,,,,Catering Menu,20,,; 
+Default product with price,ACTIVE,,,Tasty fresh,Catering Menu,,,; 
+Popiah DIY Set (20 Guest),ACTIVE,,,,Catering Menu,1,,; 
+Kueh Pie Tee DIY Set (20 Guest),ACTIVE,,,Tasty fresh,Catering Menu,1,,; ; 
+Chinese Vegetarian Bento w/ Dessert Of The Day,ACTIVE,,,Tasty fresh,Catering Menu,1,,; ; 
+Indian Vegetarian Bento w/ Dessert Of The Day,ACTIVE,,,Tasty fresh,Catering Menu,1,,; ; 
+Satay (Chicken) (50 PCS),ACTIVE,,,,Catering Menu,1,,; 
+Satay (Mutton) (50 PCS),ACTIVE,,,,Catering Menu,1,,; 
+dawn glade,ACTIVE,,,Tasty fresh,,,,
+summer leaf,ACTIVE,,,,,,,
+hidden moon,ACTIVE,,,Tasty fresh,,,,
+twilight shadow,ACTIVE,,,,,,,
+Founder's Curry Chicken,ACTIVE,,,Tasty fresh,Catering Menu,20,,; ; 
+Sushi Platter - Set A (80pcs),ACTIVE,,,,Catering Menu,1,,; 
+Sushi Platter - Set B (96pcs),ACTIVE,,,,Catering Menu,1,,; 
+Honey Drumlets (50PCS),ACTIVE,,,Tasty fresh,Catering Menu,1,,; ; 
+Otah In Banana Leaf (50 PCS),ACTIVE,,,,Catering Menu,1,,; 
+Deep Fried Party Platter (Ebi Prawn, Teriyaki Drumlets, Chicken Nugget, Breaded Scallop & Fish Ball),ACTIVE,,,Tasty fresh,Catering Menu,1,,; ; 
+Breaded Scallop,ACTIVE,,,Tasty fresh,Catering Menu,20,,; ; 
+Sotong Ball,ACTIVE,,,,Catering Menu,20,,; 
+Chicken Nuggets,ACTIVE,,,Tasty fresh,Catering Menu,20,,; ; 
+Pastry,ACTIVE,,,,Catering Menu,20,topup,; ; 
+Peranakan Mini Buffet Set B,ACTIVE,,,,,,,
+Peranakan Mini Buffet Set C,ACTIVE,,,,,,,
+Testing Menu,ACTIVE,,,,,,,
+Neon Sign,ACTIVE,,,,,,,
+Testing menu,ACTIVE,,,,,,,
+Testing menu-shippingfee,ACTIVE,,,,,,,
+Sambal Belacan Chilli,ACTIVE,true,false,,,,,; 
+Signature Kampong Fried Mee Siam,ACTIVE,true,false,,,,,; 
+Signature Kampong Dry Laksa,ACTIVE,true,true,,,,,; 
+Buah Keluak Fried Rice,ACTIVE,false,true,,,,,; 
+Blue Pea Flower Fragrant Rice,ACTIVE,false,false,Tasty fresh,,,,; ; 
+Classic Ayam Buah Keluak,ACTIVE,false,false,Tasty fresh,,,,; ; 
+Founder's Curry Chicken,ACTIVE,true,false,Tasty fresh,,,,; ; 
+Ayam Panggang,ACTIVE,true,true,Tasty fresh,,,,; ; 
+Nonya Assam Chicken,ACTIVE,false,false,,,,,; 
+Nonya Chap Chye W Mushroom,ACTIVE,true,false,,,,,; 
+Sambal Long Bean,ACTIVE,false,false,,,,,; 
+Nonya Sayur Lodeh,ACTIVE,true,false,,,,,; 
+Wok Fried French Bean with Petai, Black Olives & Cherry Tomato,ACTIVE,false,false,,,,,; 
+Steamed Assam Sambal Fish,ACTIVE,true,true,,,,,; 
+Curry Assam Fish with Pineapple Slices,ACTIVE,false,true,Tasty fresh,,,,; ; 
+Fish Fillet W Homemade Sambal Dip,ACTIVE,false,false,Tasty fresh,,,,; ; 
+Ikan Panggang Bumbu Kari,ACTIVE,false,false,Tasty fresh,,,,; ; 
+Otah with Leaf,ACTIVE,false,false,,,,,; 
+Mini Custard Puff,ACTIVE,true,false,,,,,; 
+Mini Chocolate Eclair,ACTIVE,false,false,,,,,; 
+Steamed Mini Soon Kueh,ACTIVE,true,true,,,,,; 
+Assorted Nonya Kueh,ACTIVE,true,false,Tasty fresh,,,,; ; 
+Assorted Nonya Kueh,ACTIVE,,,Tasty fresh,,,,
+Peranakan Mini Buffet Set B,ACTIVE,,,,,,,
+Neon Sign,ACTIVE,,,,,,,
+Sambal Belacan Chilli,ACTIVE,true,false,,,,,; 
+Signature Kampong Fried Mee Siam,ACTIVE,true,false,,,,,; 
+Signature Kampong Dry Laksa,ACTIVE,true,true,,,,,; 
+Buah Keluak Fried Rice,ACTIVE,false,true,,,,,; 
+Blue Pea Flower Fragrant Rice,ACTIVE,false,false,Tasty fresh,,,,; ; 
+Classic Ayam Buah Keluak,ACTIVE,false,false,Tasty fresh,,,,; ; 
+Founder's Curry Chicken,ACTIVE,true,false,Tasty fresh,,,,; ; 
+Ayam Panggang,ACTIVE,true,true,Tasty fresh,,,,; ; 
+Nonya Assam Chicken,ACTIVE,false,false,,,,,; 
+Nonya Chap Chye W Mushroom,ACTIVE,true,false,,,,,; 
+Sambal Long Bean,ACTIVE,false,false,,,,,; 
+Nonya Sayur Lodeh,ACTIVE,true,false,,,,,; 
+Wok Fried French Bean with Petai, Black Olives & Cherry Tomato,ACTIVE,false,false,,,,,; 
+Steamed Assam Sambal Fish,ACTIVE,true,true,,,,,; 
+Curry Assam Fish with Pineapple Slices,ACTIVE,false,true,Tasty fresh,,,,; ; 
+Fish Fillet W Homemade Sambal Dip,ACTIVE,false,false,Tasty fresh,,,,; ; 
+Ikan Panggang Bumbu Kari,ACTIVE,false,false,Tasty fresh,,,,; ; 
+Otah with Leaf,ACTIVE,false,false,,,,,; 
+Mini Custard Puff,ACTIVE,true,false,,,,,; 
+Mini Chocolate Eclair,ACTIVE,false,false,,,,,; 
+Steamed Mini Soon Kueh,ACTIVE,true,true,,,,,; 
+Assorted Nonya Kueh,ACTIVE,true,false,Tasty fresh,,,,; ; 
+Assorted Nonya Kueh,ACTIVE,,,Tasty fresh,,,,
+Test Product,ACTIVE,,,,Catering Menu,,,
+Orange Clove Eco Pak Water 350ml X 24 (carton),ACTIVE,,,,Catering Menu,1,,; 
+Orange Clove Eco Pak Water (350ml),ACTIVE,,,,Catering Menu,10,,; 
+Packet Apple Juice,ACTIVE,,,,Catering Menu,10,,; 
+Packet Orange Juice,ACTIVE,,,,Catering Menu,10,,; 
+Coco Life Coconut Water (330ml),ACTIVE,,,Tasty fresh,Catering Menu,10,,; ; 
+Assorted Packet Drinks,ACTIVE,,,Tasty fresh,Catering Menu,10,,; ; 
+Pick Me Up Tea (10-12 Guests),ACTIVE,,,,Catering Menu,1,,; 
+Singapore Laksa w/ Condiments,ACTIVE,,,,Catering Menu,20,,; 
+Mee Siam w/ Condiments,ACTIVE,,,,Catering Menu,20,,; 
+Assorted Packet Drinks,ACTIVE,,,Tasty fresh,Catering Menu,20,,; ; 
+Sweets,ACTIVE,,,,Catering Menu,20,,; 
+Default product with price,ACTIVE,,,Tasty fresh,Catering Menu,,,; 
+Popiah DIY Set (20 Guest),ACTIVE,,,,Catering Menu,1,,; 
+Kueh Pie Tee DIY Set (20 Guest),ACTIVE,,,Tasty fresh,Catering Menu,1,,; ; 
+Chinese Vegetarian Bento w/ Dessert Of The Day,ACTIVE,,,Tasty fresh,Catering Menu,1,,; ; 
+Indian Vegetarian Bento w/ Dessert Of The Day,ACTIVE,,,Tasty fresh,Catering Menu,1,,; ; 
+Satay (Chicken) (50 PCS),ACTIVE,,,,Catering Menu,1,,; 
+Satay (Mutton) (50 PCS),ACTIVE,,,,Catering Menu,1,,; 
+dawn glade,ACTIVE,,,Tasty fresh,,,,
+summer leaf,ACTIVE,,,,,,,
+hidden moon,ACTIVE,,,Tasty fresh,,,,
+twilight shadow,ACTIVE,,,,,,,
+Founder's Curry Chicken,ACTIVE,,,Tasty fresh,Catering Menu,20,,; ; 
+Sushi Platter - Set A (80pcs),ACTIVE,,,,Catering Menu,1,,; 
+Sushi Platter - Set B (96pcs),ACTIVE,,,,Catering Menu,1,,; 
+Honey Drumlets (50PCS),ACTIVE,,,Tasty fresh,Catering Menu,1,,; ; 
+Otah In Banana Leaf (50 PCS),ACTIVE,,,,Catering Menu,1,,; 
+Deep Fried Party Platter (Ebi Prawn, Teriyaki Drumlets, Chicken Nugget, Breaded Scallop & Fish Ball),ACTIVE,,,Tasty fresh,Catering Menu,1,,; ; 
+Breaded Scallop,ACTIVE,,,Tasty fresh,Catering Menu,20,,; ; 
+Sotong Ball,ACTIVE,,,,Catering Menu,20,,; 
+Chicken Nuggets,ACTIVE,,,Tasty fresh,Catering Menu,20,,; ; 
+Pastry,ACTIVE,,,,Catering Menu,20,topup,; ; 
+Peranakan Mini Buffet Set B,ACTIVE,,,,,,,
+Peranakan Mini Buffet Set C,ACTIVE,,,,,,,
+Testing Menu,ACTIVE,,,,,,,
+Neon Sign,ACTIVE,,,,,,,
+Testing menu,ACTIVE,,,,,,,
+Testing menu-shippingfee,ACTIVE,,,,,,,
