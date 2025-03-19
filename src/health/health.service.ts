@@ -1,66 +1,3 @@
-// // src/health-data/health-data.service.ts
-// import { Injectable } from '@nestjs/common';
-// import { InjectRepository } from '@nestjs/typeorm';
-// import { Repository } from 'typeorm';
-// import { HealthData } from './health.entity';
-
-// @Injectable()
-// export class HealthDataService {
-//   constructor(
-//     @InjectRepository(HealthData)
-//     private healthDataRepository: Repository<HealthData>,
-//   ) {}
-
-//   // Health data create karo
-//   async createHealthData(
-//     heightFeet: number,
-//     heightInches: number,
-//     weight: number,
-//     age: number,
-//   ): Promise<HealthData> {
-//     const healthData = this.healthDataRepository.create({
-//       heightFeet,
-//       heightInches,
-//       weight,
-//       age,
-//     });
-//     return this.healthDataRepository.save(healthData);
-//   }
-
-//   // Saara health data fetch karo
-//   async getAllHealthData(): Promise<HealthData[]> {
-//     return this.healthDataRepository.find();
-//   }
-
-//   // Health data update karo
-//   async updateHealthData(
-//     id: number,
-//     heightFeet: number,
-//     heightInches: number,
-//     weight: number,
-//     age: number,
-//   ): Promise<HealthData> {
-//     const healthData = await this.healthDataRepository.findOne({
-//       where: { id },
-//     });
-//     if (!healthData) {
-//       throw new Error('Health data not found');
-//     }
-
-//     healthData.heightFeet = heightFeet;
-//     healthData.heightInches = heightInches;
-//     healthData.weight = weight;
-//     healthData.age = age;
-
-//     return this.healthDataRepository.save(healthData);
-//   }
-
-//   // Health data delete karo
-//   async deleteHealthData(id: number): Promise<void> {
-//     await this.healthDataRepository.delete(id);
-//   }
-// }
-
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
@@ -74,10 +11,9 @@ export class HealthDataService {
     private healthDataRepository: Repository<HealthData>,
 
     @InjectRepository(User)
-    private userRepository: Repository<User>, // Inject User repository to validate user
+    private userRepository: Repository<User>,
   ) {}
 
-  // Health data create karo
   async createHealthData(
     heightFeet: number,
     heightInches: number,
@@ -119,21 +55,18 @@ export class HealthDataService {
     return this.healthDataRepository.save(healthData);
   }
 
-  // Saara health data fetch karo
   async getAllHealthData(): Promise<HealthData[]> {
     return this.healthDataRepository.find();
   }
 
-  // Health data update karo
   async updateHealthData(
     id: number,
     heightFeet: number,
     heightInches: number,
     weight: number,
     age: number,
-    userId: number, // Accept userId as a parameter
+    userId: number,
   ): Promise<HealthData> {
-    // Step 1: Find the existing health data by id
     const healthData = await this.healthDataRepository.findOne({
       where: { id },
     });
@@ -142,22 +75,18 @@ export class HealthDataService {
       throw new Error('Health data not found');
     }
 
-    // Step 2: Check if the health data belongs to the correct user
     if (healthData.userId !== userId) {
       throw new Error('This health data does not belong to the provided user');
     }
 
-    // Step 3: Update the health data fields
     healthData.heightFeet = heightFeet;
     healthData.heightInches = heightInches;
     healthData.weight = weight;
     healthData.age = age;
 
-    // Step 4: Save the updated health data and return it
     return this.healthDataRepository.save(healthData);
   }
 
-  // Health data delete karo
   async deleteHealthData(id: number): Promise<void> {
     await this.healthDataRepository.delete(id);
   }

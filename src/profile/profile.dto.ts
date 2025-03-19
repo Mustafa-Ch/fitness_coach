@@ -1,4 +1,5 @@
 // profile.dto.ts
+import { Type } from 'class-transformer';
 import {
   IsString,
   IsOptional,
@@ -25,5 +26,6 @@ export class CreateProfileDto {
   profilePicture: string;
 
   @IsInt()
-  userId: number; // This links the profile to a specific user
+  @Type(() => Number)
+  userId: number;
 }

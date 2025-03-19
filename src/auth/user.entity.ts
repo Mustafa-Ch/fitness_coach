@@ -7,6 +7,7 @@ import { Profile } from '../profile/profile.entity'; // Import Profile entity
 import { DietaryPreference } from '../diet/diet.entity';
 
 import { UploadedFile } from 'src/files/uploaded-file.entity';
+import { HealthKit } from 'src/healthKit/healthKit.entity';
 
 @Entity('users')
 export class User {
@@ -16,7 +17,7 @@ export class User {
   @Column({ unique: true })
   email: string;
 
-  @Column()
+  @Column({ nullable: true })
   password: string;
 
   @Column({ default: false })
@@ -24,9 +25,6 @@ export class User {
 
   @Column({ type: 'text', nullable: true })
   verificationToken: string | null;
-
-  @Column({ type: 'text', nullable: true })
-  accessToken: string | null;
 
   // OneToMany relationship with Goal entity (a user can have many goals)
   @OneToMany(() => Goal, (goal) => goal.user)
@@ -50,4 +48,7 @@ export class User {
 
   @OneToMany(() => UploadedFile, (file) => file.user)
   files: UploadedFile[];
+
+  @OneToMany(() => HealthKit, (healthKit) => healthKit.user)
+  healthKitRecords: HealthKit[];
 }

@@ -11,7 +11,7 @@ import { User } from './user.entity';
     TypeOrmModule.forFeature([User]),
     MailerModule,
     JwtModule.register({
-      secret: process.env.JWT_SECRET_KEY || 'your_secret_key',
+      secret: process.env.JWT_SECRET_KEY,
     }),
   ],
   providers: [AuthService],

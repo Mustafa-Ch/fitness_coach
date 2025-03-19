@@ -42,7 +42,7 @@ export class FileUploadController {
     if (!file) {
       throw new NotFoundException('File not found');
     }
-
+    console.log(file);
     const uploadedFile = await this.fileUploadService.uploadFile(userId, file);
     return {
       message: 'File uploaded successfully',

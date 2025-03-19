@@ -24,11 +24,10 @@ export class FitnessLevel {
   })
   level: FitnessLevelEnum;
 
-  // Add the userId field to associate the fitness level with a user
   @ManyToOne(() => User, (user) => user.fitnessLevels)
-  @JoinColumn({ name: 'userId' }) // Define the column name in the FitnessLevel table
-  user: User; // This creates the relationship with the User entity
+  @JoinColumn({ name: 'userId' })
+  user: User;
 
-  @Column() // Explicitly adding userId column for clarity
+  @Column()
   userId: number;
 }

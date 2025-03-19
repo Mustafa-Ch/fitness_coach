@@ -21,15 +21,14 @@ export class ProfileService {
   ) {}
 
   async createProfile(createProfileDto: CreateProfileDto): Promise<Profile> {
-    const { userId, ...profileData } = createProfileDto;
-
+    let { userId, ...profileData } = createProfileDto;
+    userId = Number(userId);
     // Find the user by ID
     const user = await this.userRepository.findOne({ where: { id: userId } });
     if (!user) {
       throw new NotFoundException('User not found');
     }
 
-    // Check if the user already has a profile
     const existingProfile = await this.profileRepository.findOne({
       where: { userId },
     });
@@ -37,16 +36,14 @@ export class ProfileService {
       throw new BadRequestException('Profile already exists for this user');
     }
 
-    // Create the new profile and associate it with the user
     const profile = this.profileRepository.create({
       ...profileData,
       user,
     });
 
-    // Save and return the newly created profile
     return await this.profileRepository.save(profile);
   }
-  // Get profile by userId
+
   async getProfileByUserId(userId: number): Promise<Profile> {
     const profile = await this.profileRepository.findOne({
       where: { userId },
@@ -60,7 +57,6 @@ export class ProfileService {
     return profile;
   }
 
-  // Update profile for a user
   async updateProfile(
     userId: number,
     updateProfileDto: UpdateProfileDto,
@@ -74,7 +70,6 @@ export class ProfileService {
     return await this.profileRepository.save(profile);
   }
 
-  // Delete profile for a user
   async deleteProfile(userId: number): Promise<void> {
     const profile = await this.profileRepository.findOne({ where: { userId } });
     if (!profile) {

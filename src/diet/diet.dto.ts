@@ -8,15 +8,15 @@ import {
 import { DietaryPreferenceEnum } from './diet.entity';
 
 export class CreateDietaryPreferenceDto {
-  @IsArray() // Ensures preference is an array
-  @IsEnum(DietaryPreferenceEnum, { each: true }) // Validates each element in the array as a valid enum
+  @IsArray()
+  @IsEnum(DietaryPreferenceEnum, { each: true })
   @IsNotEmpty()
   preference: DietaryPreferenceEnum[];
 
-  @IsOptional() // Explanation is optional
+  @IsOptional()
   @IsString()
   explanation?: string;
 
-  @IsNotEmpty() // Ensure userId is provided
+  @IsNotEmpty()
   userId: number;
 }

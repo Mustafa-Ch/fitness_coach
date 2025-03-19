@@ -53,7 +53,6 @@ export class AuthService {
   }
 
   async verifyEmail(token: string) {
-    // Find the user by the verification token
     const user = await this.userRepository.findOne({
       where: { verificationToken: token },
     });
@@ -64,13 +63,12 @@ export class AuthService {
 
     user.isVerified = true;
     user.verificationToken = null;
-    // Generate the JWT token (e.g., for login)
-    const jwtToken = this.jwtService.sign({ id: user.id, email: user.email });
 
-    // Save the JWT token in the database (optional, can be stored for sessions)
-    user.accessToken = jwtToken;
+    const jwtToken = this.jwtService.sign(
+      { id: user.id, email: user.email },
+      { expiresIn: '7d', secret: process.env.JWT_SECRET_KEY },
+    );
 
-    // Save the updated user
     await this.userRepository.save(user);
 
     return {
@@ -84,111 +82,55 @@ export class AuthService {
     };
   }
 
-  //   async registerWithGoogle(email: string, token: string,type:string) {
-  //     const googlePayload = await this.verifyGoogleToken(token);
-  //     console.log(googlePayload);
-  //     if (!googlePayload || googlePayload.email !== email) {
-  //       throw new BadRequestException('Invalid or mismatched Google token.');
-  //     }
-
-  //     let user = await this.userRepository.findOne({
-  //       where: { email },
-  //     });
-  // if(type=='login'){
-  //   if (user) {
-  //     user.accessToken = token; // Update the access token
-  //     await this.userRepository.save(user); // Save the updated user record
-  //    return {
-  //       message: 'User logged in successfully with Google.',
-  //       user: {
-  //         id: user.id,
-  //         email: user.email,
-  //         isVerified: user.isVerified,
-  //       },
-  //       accessToken: token, // Return the new Google access token
-  //     };
-  //   }else{
-  //     if(user){
-  //       throw new BadRequestException('User already exist')
-  //     }
-  //   }
-  // }
-
-  //     // Step 4: Create a new user record if not exists
-  //     user = this.userRepository.create({
-  //       email,
-  //       isVerified: true,
-  //       verificationToken: null,
-  //       accessToken: token,
-  //     });
-
-  //     // Step 5: Save the new user record to the database
-  //     await this.userRepository.save(user);
-
-  //     return {
-  //       message: 'User registered successfully with Google.',
-  //       user: {
-  //         id: user.id,
-  //         email: user.email,
-  //         isVerified: user.isVerified,
-  //       },
-  //       accessToken: token, // Return the Google access token
-  //     };
-  //   }
   async registerWithGoogle(email: string, token: string) {
-    // Step 1: Verify the Google Token
     const googlePayload = await this.verifyGoogleToken(token);
     console.log(googlePayload);
 
-    // Check if the email from Google matches the email passed in
     if (!googlePayload || googlePayload.email !== email) {
       throw new BadRequestException('Invalid or mismatched Google token.');
     }
 
-    // Step 2: Check if the user already exists in the database
     let user = await this.userRepository.findOne({
       where: { email },
     });
 
     if (user) {
-      user.accessToken = token; // Update the access token
-      await this.userRepository.save(user); // Save the updated user record
-
+      await this.userRepository.save(user);
+      const jwtToken = this.jwtService.sign(
+        { id: user?.id, email: user?.email },
+        { expiresIn: '7d', secret: process.env.JWT_SECRET_KEY },
+      );
       return {
-        message: 'User logged in successfully with Google.',
         user: {
           id: user.id,
           email: user.email,
           isVerified: user.isVerified,
         },
-        accessToken: token, // Return the new Google access token
+        accessToken: jwtToken,
       };
     }
 
-    // If the type is not 'login' (i.e., user is registering)
     if (!user) {
-      // Step 3: Create a new user record if user does not exist
       user = this.userRepository.create({
         email,
-        isVerified: true, // Assuming user is verified immediately
+        isVerified: true,
         verificationToken: null,
-        accessToken: token,
       });
 
-      // Step 4: Save the new user record to the database
       await this.userRepository.save(user);
-
+      const jwtToken = this.jwtService.sign(
+        { id: user?.id, email: user?.email },
+        { expiresIn: '7d', secret: process.env.JWT_SECRET_KEY },
+      );
       return {
-        message: 'User registered successfully with Google.',
         user: {
           id: user.id,
           email: user.email,
           isVerified: user.isVerified,
         },
-        accessToken: token, // Return the Google access token
+        accessToken: jwtToken,
       };
     } else {
-      // This will never be reached because we already checked in the `login` condition
       throw new BadRequestException('User already exists.');
     }
   }
@@ -210,7 +152,6 @@ export class AuthService {
   }
 
   async login(email: string, password: string) {
-    //  Check if user exists
     console.log('email', email);
 
     const user = await this.userRepository.findOne({ where: { email } });
@@ -218,15 +159,15 @@ export class AuthService {
       throw new BadRequestException('Password or email is incorrect');
     }
 
-    //  Compare Passwords
     const isPasswordValid = await bcrypt.compare(password, user.password);
     if (!isPasswordValid) {
       throw new BadRequestException('Password or email is incorrect');
     }
 
-    //  Generate JWT Token
-    const jwtToken = this.jwtService.sign({ id: user.id, email: user.email });
-    user.accessToken = jwtToken;
+    const jwtToken = this.jwtService.sign(
+      { id: user.id, email: user?.email },
+      { expiresIn: '7d', secret: process.env.JWT_SECRET_KEY },
+    );
     await this.userRepository.save(user);
     return {
       message: 'Login successful',
@@ -240,35 +181,40 @@ export class AuthService {
   }
 
   async registerWithApple(appleUserId: string, email: string) {
-    // Step 1: Check if user exists
-    let user = await this.userRepository.findOne({ where: { email } });
+    let user = await this.userRepository.findOne({
+      where: { email },
+    });
 
     if (user) {
-      user.accessToken = appleUserId;
+      const jwtToken = this.jwtService.sign(
+        { id: user.id, email: user?.email },
+        { expiresIn: '7d', secret: process.env.JWT_SECRET_KEY },
+      );
       return {
-        message: 'User logged in successfully with Apple.',
         user: {
           id: user.id,
           email: user.email,
           isVerified: user.isVerified,
+          token: jwtToken,
         },
       };
     }
 
-    // Step 2: Register a new user if not found
     user = this.userRepository.create({
       email,
-      isVerified: true, // Assuming Apple users are verified
-      accessToken: appleUserId,
+      isVerified: true,
     });
     await this.userRepository.save(user);
+    const jwtToken = this.jwtService.sign(
+      { id: user?.id, email: user?.email },
+      { expiresIn: '7d', secret: process.env.JWT_SECRET_KEY },
+    );
     return {
-      message: 'User registered successfully with Apple.',
       user: {
         id: user.id,
         email: user.email,
         isVerified: user.isVerified,
-        accessToken: user.accessToken,
+        token: jwtToken,
       },
     };
   }

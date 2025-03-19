@@ -20,24 +20,22 @@ export class HealthDataController {
     @Body('heightInches') heightInches: number,
     @Body('weight') weight: number,
     @Body('age') age: number,
-    @Body('userId') userId: number, // Add userId to the request body
+    @Body('userId') userId: number,
   ) {
     return this.healthDataService.createHealthData(
       heightFeet,
       heightInches,
       weight,
       age,
-      userId, // Pass userId to service
+      userId,
     );
   }
 
-  // Saara health data fetch karo
   @Get()
   async getAllHealthData() {
     return this.healthDataService.getAllHealthData();
   }
 
-  // Health data update karo
   @Put(':id')
   async updateHealthData(
     @Param('id') id: number,
@@ -45,7 +43,7 @@ export class HealthDataController {
     @Body('heightInches') heightInches: number,
     @Body('weight') weight: number,
     @Body('age') age: number,
-    @Body('userId') userId: number, // Add userId to the request body
+    @Body('userId') userId: number,
   ) {
     return this.healthDataService.updateHealthData(
       id,
@@ -57,7 +55,6 @@ export class HealthDataController {
     );
   }
 
-  // Health data delete karo
   @Delete(':id')
   async deleteHealthData(@Param('id') id: number) {
     return this.healthDataService.deleteHealthData(id);

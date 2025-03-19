@@ -12,6 +12,7 @@ import { DietaryPreferenceModule } from './diet/diet.module';
 import { FileUploadModule } from './files/files.module';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import * as path from 'path';
+import { HealthKitModule } from './healthKit/healthKit.module';
 
 @Module({
   imports: [
@@ -48,6 +49,7 @@ import * as path from 'path';
     ProfileModule,
     DietaryPreferenceModule,
     FileUploadModule,
+    HealthKitModule,
   ],
   controllers: [AppController],
   providers: [AppService],

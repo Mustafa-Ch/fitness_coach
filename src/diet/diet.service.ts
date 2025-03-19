@@ -43,7 +43,7 @@ export class DietaryPreferenceService {
         conflicts.push(
           `User already has the "${preference}" dietary preference.`,
         );
-        continue; // Skip this preference and continue with the next one
+        continue;
       }
 
       const dietaryPreference = this.dietaryPreferenceRepository.create({
@@ -64,7 +64,6 @@ export class DietaryPreferenceService {
     return responses;
   }
 
-  // Fetch dietary preferences for a specific user
   async getDietaryPreferencesByUser(
     userId: number,
   ): Promise<DietaryPreference[]> {
@@ -79,12 +78,10 @@ export class DietaryPreferenceService {
     });
   }
 
-  // Fetch all dietary preferences
   async getAllDietaryPreferences(): Promise<DietaryPreference[]> {
     return this.dietaryPreferenceRepository.find({ relations: ['user'] });
   }
 
-  // Update dietary preference
   async updateDietaryPreference(
     id: number,
     preference: DietaryPreferenceEnum,
@@ -107,7 +104,6 @@ export class DietaryPreferenceService {
     return this.dietaryPreferenceRepository.save(dietaryPreference);
   }
 
-  // Delete dietary preference
   async deleteDietaryPreference(id: number): Promise<void> {
     const dietaryPreference = await this.dietaryPreferenceRepository.findOne({
       where: { id },
