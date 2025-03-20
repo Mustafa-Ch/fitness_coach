@@ -6,7 +6,6 @@ import { HealthDataService } from './health.service';
 import { HealthDataController } from './health.controller';
 import { User } from '../auth/user.entity'; // Import User entity
 import { JwtMiddleware } from 'src/jwtMiddleWare';
-import { GoalController } from 'src/goal/goal.controller';
 import { JwtModule } from '@nestjs/jwt';
 
 @Module({
@@ -21,6 +20,6 @@ import { JwtModule } from '@nestjs/jwt';
 })
 export class HealthDataModule {
   configure(consumer: MiddlewareConsumer) {
-    consumer.apply(JwtMiddleware).forRoutes(GoalController);
+    consumer.apply(JwtMiddleware).forRoutes(HealthDataController);
   }
 }
