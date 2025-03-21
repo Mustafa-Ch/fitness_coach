@@ -17,7 +17,11 @@ export class AuthController {
   @Post('register')
   @UsePipes(new ValidationPipe({ whitelist: true }))
   async register(@Body() body: RegisterDto) {
-    return this.authService.register(body.email, body.password);
+    return this.authService.register(
+      body.email,
+      body.password,
+      body.confirmPassword,
+    );
   }
 
   @Post('verify')

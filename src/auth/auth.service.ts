@@ -18,9 +18,7 @@ export class AuthService {
     private readonly jwtService: JwtService,
   ) {}
 
-  async register(email: string, password: string) {
-    console.log(password);
-
+  async register(email: string, password: string, confirmPassword: string) {
     const existingUser = await this.userRepository.findOne({
       where: { email },
     });
@@ -28,7 +26,11 @@ export class AuthService {
     if (existingUser) {
       throw new BadRequestException('User already exists');
     }
-
+    if (password !== confirmPassword) {
+      throw new BadRequestException(
+        'Password and Confirm Password must be same',
+      );
+    }
     // 6-digit OTP generate karna
     const verificationToken = Math.floor(
       100000 + Math.random() * 900000,
