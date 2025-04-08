@@ -1,99 +1,255 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# Fitness Coach API Documentation
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+## 1. Token Verification
+### Endpoint:
+- **URL:** `https://fitnesscoach-production.up.railway.app/auth/verify`
+- **Method:** `POST`
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+### Description:
+This endpoint verifies the user's token for authentication.
 
-## Description
+### Request Headers:
+| Key           | Value                 |
+|--------------|----------------------|
+| Content-Type | application/json      |
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
-
-## Project setup
-
-```bash
-$ npm install
+### Request Body:
+```json
+{
+  "token": 263202
+}
 ```
 
-## Compile and run the project
+### Response:
+- `200 OK`: If the token is valid and the user is verified.
+- `400 Bad Request`: If the token is invalid or missing.
 
-```bash
-# development
-$ npm run start
+---
 
-# watch mode
-$ npm run start:dev
+## 2. Create User Profile
+### Endpoint:
+- **URL:** `https://fitnesscoach-production.up.railway.app/profile/create`
+- **Method:** `POST`
 
-# production mode
-$ npm run start:prod
+### Description:
+This endpoint is used to create a profile for a user.
+
+### Request Headers:
+| Key           | Value                 |
+|--------------|----------------------|
+| Content-Type | application/json      |
+
+### Request Body:
+```json
+{
+  "fullName": "John Doe",
+  "gender": "Male",
+  "birthday": "1994-05-12T00:00:00Z",
+  "profilePicture": "https://example.com/profile-pic.jpg",
+  "userId": 1
+}
 ```
 
-## Run tests
+### Response:
+- `201 Created`: If the profile is successfully created.
+- `400 Bad Request`: If required fields are missing or invalid.
 
-```bash
-# unit tests
-$ npm run test
+---
 
-# e2e tests
-$ npm run test:e2e
+## 3. Get User Profile
+### Endpoint:
+- **URL:** `https://fitnesscoach-production.up.railway.app/profile/{userId}`
+- **Method:** `GET`
 
-# test coverage
-$ npm run test:cov
+### Description:
+This endpoint retrieves the profile of a user by their `userId`.
+
+### Request Headers:
+| Key           | Value                 |
+|--------------|----------------------|
+| Content-Type | application/json      |
+
+### Response:
+- `200 OK`: Returns the user profile.
+- `404 Not Found`: If the profile is not found for the given `userId`.
+
+---
+
+## 4. Update User Profile
+### Endpoint:
+- **URL:** `https://fitnesscoach-production.up.railway.app/profile/update/{userId}`
+- **Method:** `PUT`
+
+### Description:
+This endpoint updates the user's profile.
+
+### Request Headers:
+| Key           | Value                 |
+|--------------|----------------------|
+| Content-Type | application/json      |
+
+### Request Body:
+```json
+{
+  "fullName": "Ahmed",
+  "gender": "Male",
+  "birthday": "1994-05-12T00:00:00Z",
+  "profilePicture": "https://example.com/profile-pic.jpg",
+  "userId": 1
+}
 ```
 
-## Deployment
+### Response:
+- `200 OK`: If the profile is successfully updated.
+- `404 Not Found`: If the profile for the given `userId` does not exist.
+- `400 Bad Request`: If required fields are missing or invalid.
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+---
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+## 5. Delete User Profile
+### Endpoint:
+- **URL:** `https://fitnesscoach-production.up.railway.app/profile/delete/{userId}`
+- **Method:** `DELETE`
 
-```bash
-$ npm install -g mau
-$ mau deploy
+### Description:
+This endpoint deletes the profile of a user by their `userId`.
+
+### Request Headers:
+| Key           | Value                 |
+|--------------|----------------------|
+| Content-Type | application/json      |
+
+### Response:
+- `200 OK`: If the profile is successfully deleted.
+- `404 Not Found`: If the profile for the given `userId` does not exist.
+
+---
+
+## 6. Create Goal
+### Endpoint:
+- **URL:** `https://fitnesscoach-production.up.railway.app/goals`
+- **Method:** `POST`
+
+### Description:
+This endpoint is used to create a goal for a user.
+
+### Request Headers:
+| Key           | Value                 |
+|--------------|----------------------|
+| Content-Type | application/json      |
+
+### Request Body:
+```json
+{
+  "types": ["Optimize general health", "Optimize general health"],
+  "userId": 1
+}
 ```
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+### Response:
+- `201 Created`: If the goal is successfully created.
+- `400 Bad Request`: If required fields are missing or invalid.
 
-## Resources
+---
 
-Check out a few resources that may come in handy when working with NestJS:
+## 7. Update Goal
+### Endpoint:
+- **URL:** `https://fitnesscoach-production.up.railway.app/goals/{goalId}`
+- **Method:** `PUT`
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+### Description:
+This endpoint updates an existing goal.
 
-## Support
+### Request Headers:
+| Key           | Value                 |
+|--------------|----------------------|
+| Content-Type | application/json      |
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+### Request Body:
+```json
+{
+  "type": "Improve recovery",
+  "userId": 1
+}
+```
 
-## Stay in touch
+### Response:
+- `200 OK`: If the goal is successfully updated.
+- `404 Not Found`: If the goal with the given `goalId` does not exist.
+- `400 Bad Request`: If required fields are missing or invalid.
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+---
 
-## License
+## 8. Get Goal
+### Endpoint:
+- **URL:** `https://fitnesscoach-production.up.railway.app/goals/{goalId}`
+- **Method:** `GET`
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+### Description:
+This endpoint retrieves a specific goal by its `goalId`.
+
+### Request Headers:
+| Key           | Value                 |
+|--------------|----------------------|
+| Content-Type | application/json      |
+
+### Response:
+- `200 OK`: Returns the goal.
+- `404 Not Found`: If the goal for the given `goalId` does not exist.
+
+---
+
+## 9. Create Fitness Level
+### Endpoint:
+- **URL:** `https://fitnesscoach-production.up.railway.app/fitness-level`
+- **Method:** `POST`
+
+### Description:
+This endpoint is used to create a fitness level for a user.
+
+### Request Headers:
+| Key           | Value                 |
+|--------------|----------------------|
+| Content-Type | application/json      |
+
+### Request Body:
+```json
+{
+  "level": "beginner",
+  "userId": 1
+}
+```
+
+### Response:
+- `201 Created`: If the fitness level is successfully created.
+- `400 Bad Request`: If required fields are missing or invalid.
+
+---
+
+## 10. Update Fitness Level
+### Endpoint:
+- **URL:** `https://fitnesscoach-production.up.railway.app/fitness-level/{fitnessLevelId}`
+- **Method:** `PUT`
+
+### Description:
+This endpoint updates the fitness level for a user.
+
+### Request Headers:
+| Key           | Value                 |
+|--------------|----------------------|
+| Content-Type | application/json      |
+
+### Request Body:
+```json
+{
+  "level": "advanced",
+  "userId": 1
+}
+```
+
+### Response:
+- `200 OK`: If the fitness level is successfully updated.
+- `404 Not Found`: If the fitness level with the given `fitnessLevelId` does not exist.
+- `400 Bad Request`: If required fields are missing or invalid.
+
+---
